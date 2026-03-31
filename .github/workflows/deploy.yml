@@ -2,7 +2,7 @@ name: Build & Push (Secure)
 
 on:
   push:
-    branches: [main]
+    branches: [production]
 
 permissions:
   id-token: write
