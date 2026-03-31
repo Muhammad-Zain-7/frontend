@@ -28,7 +28,7 @@ jobs:
       - name: Login to ECR
         run: |
           aws ecr get-login-password \
-          | docker login --username AWS --password-stdin 509399631926dkr.ecr.ap-south-1.amazonaws.com
+          | docker login --username AWS --password-stdin 509399631926.dkr.ecr.ap-south-1.amazonaws.com
 
       - name: Build & Push
         run: |
