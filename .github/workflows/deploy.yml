@@ -32,7 +32,7 @@ jobs:
 
       - name: Build & Push
         run: |
-          docker build -t k8s-frontend:${{ github.sha }} .
-          docker tag k8s-frontend:${{ github.sha }} \
-          509399631926.dkr.ecr.us-east-1.amazonaws.com/k8s-frontend:${{ github.sha }}
-          docker push 509399631926.dkr.ecr.us-east-1.amazonaws.com/k8s-frontend:${{ github.sha }}
+          docker build -t k8s-frontend:latest .
+          docker tag k8s-frontend:latest \
+          509399631926.dkr.ecr.us-east-1.amazonaws.com/k8s-frontend:latest
+          docker push 509399631926.dkr.ecr.us-east-1.amazonaws.com/k8s-frontend:latest
