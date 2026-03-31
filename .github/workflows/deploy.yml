@@ -4,6 +4,10 @@ on:
   push:
     branches: [production]
 
+concurrency:
+    group: dev  
+    cancel-in-progress: true
+
 permissions:
   id-token: write
   contents: read
@@ -30,5 +34,5 @@ jobs:
         run: |
           docker build -t k8s-frontend:${{ github.sha }} .
           docker tag k8s-frontend:${{ github.sha }} \
-          <account-id>.dkr.ecr.ap-south-1.amazonaws.com/k8s-frontend:${{ github.sha }}
-          docker push <account-id>.dkr.ecr.ap-south-1.amazonaws.com/k8s-frontend:${{ github.sha }}
+          509399631926.dkr.ecr.ap-south-1.amazonaws.com/k8s-frontend:${{ github.sha }}
+          docker push 509399631926.dkr.ecr.ap-south-1.amazonaws.com/k8s-frontend:${{ github.sha }}
